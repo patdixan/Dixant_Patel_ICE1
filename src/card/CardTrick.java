@@ -35,6 +35,10 @@ public class CardTrick {
             magicHand[i] = c1;
 
         }
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(7); // Set the value of the lucky card
+        luckyCard.setSuit("Hearts"); // Set the suit of the lucky card
 
         System.out.println("Pick a card between 0-13: ");
         int value = scanner.nextInt();
@@ -57,6 +61,11 @@ public class CardTrick {
             System.out.println("Your card is in the magic hand!");
         } else {
             System.out.println("Your card is not in the magic hand.");
+        }
+         if (luckyCard.equals(userCard)) {
+            System.out.println("Congratulations! You picked the lucky card!");
+        } else {
+            System.out.println("Better luck next time!");
         }
     }
 
