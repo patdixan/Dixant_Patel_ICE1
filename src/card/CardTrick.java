@@ -10,8 +10,7 @@ package card;
  * the user's card. To be used as starting code in ICE 1
  *
  * @author srinivsi
- * @modifier Dixantkumar Patel 
- * Student Id - 991650706
+ * @modifier Dixantkumar Patel Student Id - 991650706
  *
  */
 import java.util.Random;
@@ -35,14 +34,14 @@ public class CardTrick {
             magicHand[i] = c1;
 
         }
-        
+
         Card luckyCard = new Card();
         luckyCard.setValue(7); // Set the value of the lucky card
         luckyCard.setSuit("Hearts"); // Set the suit of the lucky card
 
-        System.out.println("Pick a card between 0-13: ");
+        System.out.print("Pick a card between 0-13: ");
         int value = scanner.nextInt();
-        System.out.println("Pick a card suit from Hearts, Diamonds, Spades and Clubs: ");
+        System.out.print("Pick a card suit from Hearts, Diamonds, Spades and Clubs: ");
         String suit = scanner.next();
 
         Card userCard = new Card();
@@ -62,10 +61,10 @@ public class CardTrick {
         } else {
             System.out.println("Your card is not in the magic hand.");
         }
-         if (luckyCard.equals(userCard)) {
+        if (luckyCard.equals(userCard)) {
             System.out.println("Congratulations! You picked the lucky card!");
         } else {
-            System.out.println("Better luck next time!");
+            System.out.println("Sorry, your lucky card is not here! Better luck next time!");
         }
     }
 
