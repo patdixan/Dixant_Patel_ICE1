@@ -10,7 +10,8 @@ package card;
  * the user's card. To be used as starting code in ICE 1
  *
  * @author srinivsi
- * @modifier Dixantkumar Patel Student Id - 991650706
+ * @modifier Dixantkumar Patel 
+ * Student ID - 991650706
  *
  */
 import java.util.Random;
@@ -19,7 +20,7 @@ import java.util.Scanner;
 public class CardTrick {
 
     public static void main(String[] args) {
-        //have to generate 7 random cards to stire in array magichand
+        // Generate 7 random cards and store them in the magicHand array
         Card[] magicHand = new Card[7];
         Random input = new Random();
         Scanner scanner = new Scanner(System.in);
@@ -28,8 +29,8 @@ public class CardTrick {
 
             Card c1 = new Card();
 
-            c1.setValue(input.nextInt(13) + 1); // 1 to 13
-            c1.setSuit(Card.SUITS[input.nextInt(4)]);
+            c1.setValue(input.nextInt(13) + 1); // Set a random value between 1 and 13
+            c1.setSuit(Card.SUITS[input.nextInt(4)]); // Set a random suit
 
             magicHand[i] = c1;
 
@@ -49,18 +50,22 @@ public class CardTrick {
         userCard.setSuit(suit);
 
         boolean found = false;
-        for (Card card : magicHand) {
-            if (card.equals(userCard)) {
+        for (int i = 0; i < magicHand.length; i++) {
+            // Check if the current card in the magicHand array is equal to the user's card
+            if (magicHand[i].equals(userCard)) {
                 found = true;
                 break;
             }
         }
 
+        // Print the result based on whether the user's card was found in the magicHand array
         if (found) {
             System.out.println("Your card is in the magic hand!");
         } else {
             System.out.println("Your card is not in the magic hand.");
         }
+
+        // Check if the user's card is the lucky card and print the appropriate message
         if (luckyCard.equals(userCard)) {
             System.out.println("Congratulations! You picked the lucky card!");
         } else {
@@ -68,7 +73,4 @@ public class CardTrick {
         }
     }
 
-    //insert code to ask the user for Card value and suit, create their card
-    // and search magicHand here
-    //Then report the result here
 }
