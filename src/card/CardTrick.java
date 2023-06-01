@@ -58,6 +58,9 @@ public class CardTrick {
             }
         }
 
+        
+        System.out.println(); //To add some blank space
+        
         // Print the result based on whether the user's card was found in the magicHand array
         if (found) {
             System.out.println("Your card is in the magic hand!");
